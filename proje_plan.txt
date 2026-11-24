@@ -1,0 +1,27 @@
+PROJE ADI: Görüntü ve Metni Birlikte İşleyen Çok Modlu (Multimodal) Yapay Zeka Asistanı
+DERS: Yapay Zeka ile Programlama
+ÖĞRENCİ: Gökce Nur BAYTAR - 363425013
+
+AMAÇ
+Kullanıcının yüklediği görselleri ve metinleri aynı anda işleyerek sorulara yanıt veren; OCR doğrulaması, çelişki kontrolü ve doğru reddetme kurallarıyla bilgi uydurmayı (halüsinasyon) önleyen, tamamen ücretsiz (0 TL) bir yapay zeka sohbet asistanı geliştirmek.
+
+KESİN OLARAK YAPILACAKLAR (ANA KAPSAM)
+1. Görsel ve Metin Analizi: Tekli veya çoklu görsel yükleyip Türkçe/İngilizce soru sorma, özetleme ve görselleri karşılaştırma.
+2. Sohbet Hafızası: Önceki mesajları ve görselleri hatırlayan, geçmiş konuşmaları SQLite ile kaydeden sohbet akışı.
+3. Çift Kanallı Okuma (Model + OCR): Görseldeki yazı ve sayıları hem yapay zeka modeliyle hem de klasik OCR ile okuyup çapraz kontrol yapma.
+4. Tablo ve Dışa Aktarma: Fiş, tablo veya grafik görsellerinden düzenli veri çıkarıp CSV/Excel olarak indirme.
+5. Halüsinasyon Önleme: Görselde olmayan bilgi sorulduğunda uydurmak yerine reddetme, görsel-metin çelişkilerini uyarma ve her cevapta güven etiketi gösterme.
+6. Üçlü Çalışma Modu (0 TL): Ücretsiz Gemini API (bulut), Ollama (çevrimdışı yerel model) ve API/GPU gerektirmeyen Demo (Mock) modu; kota koruması için yanıt önbelleği.
+7. Sade Web Arayüzü: Streamlit ile tek ekranlı anlaşılır sohbet ekranı, dosya doğrulama ve anlaşılır hata uyarıları.
+8. Test ve Ölçüm: 30-50 örneklik test seti ve tuzak sorularla doğruluk ile halüsinasyon engelleme oranlarını raporlama.
+
+OPSİYONEL / EK ÖZELLİKLER
+- Görsel Kanıt İşaretleme: Cevabın dayandığı bölgeyi fotoğraf üzerinde kutuyla gösterme.
+- PDF Desteği: Çok sayfalı PDF belgelerini okuyup sayfa referanslı cevap verme.
+- Ders Asistanı Modu: Ders notu veya slayt fotoğrafından özet ve çalışma sorusu üretme.
+- Model Karşılaştırma: Aynı soruyu bulut ve yerel modele sorup yanıtları yan yana kıyaslama.
+- Gizlilik ve Görsel Araçları: EXIF konum verisi silme, yüz bulanıklaştırma veya bölge kırpma.
+- Sesli Giriş: Konuşarak soru sorma.
+
+KULLANILACAK TEKNOLOJİLER
+Python, Streamlit, Gemini API (Ücretsiz), Ollama (Qwen3-VL / Gemma 3), Pillow, OpenCV, Tesseract OCR, SQLite, Pydantic, Pandas, pytest.
